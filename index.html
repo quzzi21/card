@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- делаем экран адаптивным -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- пишем имя веб-сайту -->
+    <title>Веб-верстка</title>
+    <!-- подключаем таблицу стилей -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--  -->
+    <div class="content">
+        <!-- здесь будет карточка с классом .card -->
+        <div class="card">
+            <!-- передняя сторона карточки - блок .card__front -->
+            <div class="card__front">
+                <!-- блок с относительным позиционированием, внутри которого изображение и название фильма -->
+                <div class="card__poster">
+                    <img src="http://3.bp.blogspot.com/--3W3Ax6HST0/UL4X4adk4oI/AAAAAAAAAGs/fVUpVD9vJRc/s1600/BLEACH-2.jpg" alt="" align="center">
+                    <div class="card__title">
+                        Блич
+                    </div>
+                </div>
+                <!-- блок с описанием фильма и кнопками -->
+                <div class="card__item">
+                    <div class="card__desc">
+                        Аниме, 2006
+                    </div>
+                    <div class="card__btn_yes">Хочу посмотреть</div>
+                    <!-- при событии клика мыши - onclick - вызывается функция swipe(1); -->
+                    <div class="card__btn_no" onclick="swipe(1);">
+                        Не хочу
+                    </div>
+                </div>
+            </div>
+            <!-- блок div.card__front закончился -->
+            <!-- задняя сторона карточки - блок .card__back -->
+            <div class="card__back">
+                <div class="card__lubus">
+                    <div class="card__lubus_text">
+                        Мой Банкай <br> тебя убъёт...
+                    </div>
+                    <img src="data:image/jpeg;base64,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" alt="Изображение">
+                    <!-- при событии клика мыши - onclick - вызывается функция swipe(0); -->
+                    <div class="card__btn_again" onclick="swipe(0);">
+                        ладно, посмотрю
+                    </div>
+                </div>
+            </div>
+            <!-- блок div.card__back закончился -->
+
+        </div>
+        <!-- блок div.card закончился -->
+
+        <!-- панель карточки - блок div.card__panel -->
+        <div class="card__panel" style="display:none;">
+
+            <div class="card__panel_ball">
+                <div class="card__panel_value">
+                    <div>8.0</div>
+                </div>
+            </div>
+            <a href="https://jut.su/bleeach/">
+            <div class="card__panel_info">
+                <img src="image\icon\info.svg" alt="">
+            </div>
+            </a>
+            <a href="https://jut.su/bleeach/episode-1.html">
+            <div class="card__panel_play">
+                <img src="image\icon\play.svg" alt="">
+            </div>
+            </a>
+        </div>
+        <!-- блок div.card__panel закончился -->
+
+    <!-- заканчивается блок .content -->
+    </div>
+    <!-- шапка с идентификатором header -->
+    <div id="header">
+        Выбор Аниме
+    </div>
+    <!-- подвал с идентификатором footer -->
+    <div id="footer">
+        iengolab, 2022
+    </div>
+
+    <!-- внутри тега <script> можно использовать Javascript -->
+    <script src="gs\script.gs"></script>
+
+</body>
+</html>
